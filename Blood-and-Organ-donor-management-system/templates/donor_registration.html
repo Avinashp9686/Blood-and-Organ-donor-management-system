@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Blood Donor Registration</h2>
+
+<form action="/add_blood_donor" method="POST">
+    <label for="blood_type">Blood Type:</label>
+    <input type="text" id="blood_type" name="blood_type" required><br>
+
+    <label for="last_donation_date">Last Donation Date:</label>
+    <input type="date" id="last_donation_date" name="last_donation_date" required><br>
+
+    <label for="reason_of_donation">Reason of Donation:</label>
+    <textarea id="reason_of_donation" name="reason_of_donation" rows="4" required></textarea><br>
+
+    <label for="user_id">User ID:</label>
+    <input type="text" id="user_id" name="user_id" required><br>
+
+    <input type="submit" value="Register Blood Donor">
+</form>
+
+</body>
+</html>
